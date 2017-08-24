@@ -1,0 +1,32 @@
+﻿SpringMVC6 project:
+- Design Layout
+- Learn about i18n: 18 letters between I and n 
+(Internationalization - Quốc tế hóa)
+
+1/ src -> nhatnghe.controller:
+- HomeController: dispatcher to index/about/contact/order view
+(vd1: edit link on browser to .../home/index.php to test this function)
+
+2/ i18n -> home: 
+- properties to translate en-vi, vi-en
+
+3/ i18n -> global.properties and global_vi.properties: 
+- properties to translate en-vi, vi-en
+
+4/ WebContent: create index.jsp file at here
+
+5/ WebContent -> css/fonts/js/images/AdmLayout.html/SideLayout.html:
+- layout using bootstrap to design layout of project
+
+6/ WebContent -> WEB-INF:
+(should be create views folder, configs at here for security)
+- lib: remmember copy all of libs to use spring framework and some others libs
+- spring-configs: 
+  + spring-config-mvc.xml file: configs view and controller
+  + spring-config-i18n.xml file: config to load i18n source folder into project
+  + spring-config-resources.xml file: config to use resources in i18n source folder 
+to use 2 language into project
+- views: include all view (jsp file) of project
+* Note: Divide the code into modules for easy management. So careful when reading code!
+
+7/ WebContent -> web.xml: configs index.jsp file, Dispatcher and UTF-8 Filter
